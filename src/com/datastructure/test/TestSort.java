@@ -2,20 +2,11 @@ package com.datastructure.test;
 
 import java.util.Arrays;
 
+import com.datastructure.sort.*;
+import com.datastructure.util.SortUtil;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import sort.BubbleSort;
-import sort.BucketSort;
-import sort.CountSort;
-import sort.HeapSort;
-import sort.InsertSort;
-import sort.MergeSort;
-import sort.QuickSort;
-import sort.RadixSort;
-import sort.SelectSort;
-import sort.ShellSort;
-import util.SortUtil;
 
 public class TestSort {
 	SortUtil su=new SortUtil();

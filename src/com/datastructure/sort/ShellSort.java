@@ -1,6 +1,6 @@
 package com.datastructure.sort;
 
-import util.SortUtil;
+import com.datastructure.util.SortUtil;
 
 public class ShellSort {
 	SortUtil su=new SortUtil();

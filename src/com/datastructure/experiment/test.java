@@ -1,26 +1,18 @@
 package com.datastructure.experiment;
 
+import com.datastructure.sort.*;
+import com.datastructure.util.InputAndOutputRedirect;
+
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import sort.BubbleSort;
-import sort.BucketSort;
-import sort.CountSort;
-import sort.HeapSort;
-import sort.InsertSort;
-import sort.MergeSort;
-import sort.QuickSort;
-import sort.RadixSort;
-import sort.SelectSort;
-import sort.ShellSort;
-import util.InputAndOutputRedirect;
 
 //各种排序性能测试
 public class test {
 	public static void main(String[] args) throws IOException{
 		//从文件读出数字并且排序，计时
-		Scanner scanner=InputAndOutputRedirect.fopenIn("file/input.txt");
+		Scanner scanner= InputAndOutputRedirect.fopenIn("file/input.txt");
 		final int MAX=100000,MIN=1;
 		int[] sort=new int[MAX];		
 		int j=0;

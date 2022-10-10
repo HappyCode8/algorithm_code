@@ -1,9 +1,9 @@
 package com.datastructure.experiment;
 
-import java.io.IOException;
+import com.datastructure.util.InputAndOutputRedirect;
+import com.datastructure.util.SortUtil;
 
-import util.InputAndOutputRedirect;
-import util.SortUtil;
+import java.io.IOException;
 
 //创建确定范围的确定数目的随机数数据,写入文件
 public class createData {

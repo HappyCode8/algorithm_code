@@ -1,14 +1,7 @@
 package com.datastructure.test;
 
+import com.datastructure.binaryTree.*;
 import org.junit.Ignore;
-import org.junit.Test;
-
-import binaryTree.ConstructBinaryTreeFromInorderAndPostorderTraversal;
-import binaryTree.ConstructBinaryTreeFromPreorderAndInorderTraversal;
-import binaryTree.InorderTraversal;
-import binaryTree.LevelOrderTraversal;
-import binaryTree.PrintTreeByLevelOrderTraversal;
-import binaryTree.TreeNode;
 
 public class BinaryTreeTest { 
 	@Ignore

@@ -2,14 +2,9 @@ package com.datastructure.test;
 
 import static org.junit.Assert.*;
 
+import com.datastructure.binarySearch.*;
 import org.junit.Ignore;
 import org.junit.Test;
-
-import binarySearch.BinarySearch1;
-import binarySearch.BinarySearch2;
-import binarySearch.BinarySearch3;
-import binarySearch.BinarySearch4;
-import binarySearch.BinarySearch5;
 
 public class BinarySearchTest {	
 	@Ignore
