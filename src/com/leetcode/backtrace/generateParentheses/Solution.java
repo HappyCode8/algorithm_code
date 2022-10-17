@@ -4,27 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
-	public List<String> generateParenthesis(int n) {
-		List<String> list=new ArrayList<String>();
-		backtrack(list,"",0,0,n);
-		return list;      
+    List<String> res = new ArrayList<>();
+
+    public List<String> generateParenthesis(int n) {
+        backtrack("", 0, 0, n);
+        return res;
     }
-	public void backtrack(List<String> list,String str,int begin,int end,int max){
-		if(str.length()==2*max){
-			list.add(str);
-			return;
-		}
-		if(begin<max) {
-			backtrack(list, str+"(", begin+1, end, max);
-		}
-		if(end<begin) {
-			backtrack(list, str+")", begin, end+1, max);
-		}
-	}
-	public static void main(String[] args){
-		Solution s=new Solution();
-		List<String> list=new ArrayList<>();
-		list=s.generateParenthesis(3);
-		System.out.println(list);
-	}
+
+    public void backtrack(String str, int begin, int end, int max) {
+        if (str.length() == 2 * max) {
+            res.add(str);
+            return;
+        }
+        if (begin < max) {
+            backtrack(str + "(", begin + 1, end, max);
+        }
+        if (end < begin) {
+            backtrack(str + ")", begin, end + 1, max);
+        }
+    }
+
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        s.generateParenthesis(3);
+        System.out.println(s.res);
+    }
 }

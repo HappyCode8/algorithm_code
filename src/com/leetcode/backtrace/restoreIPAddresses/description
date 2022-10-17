@@ -1,5 +1,5 @@
 93. Restore IP Addresses
-Given a string containing only digits, restore it by returning all possible valid IP address com.leetcode.combinations.
+Given a string containing only digits, restore it by returning all possible valid IP address com.leetcode.backtrace.combinations.
 
 Example:
 

@@ -4,30 +4,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
+    List<List<Integer>> result = new ArrayList<>();
+    List<Integer> tempList = new ArrayList<>();
+
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> res = new ArrayList<>();
-        backtrack(res, new ArrayList<>(), nums);
-        return res;
+        boolean[] used = new boolean[nums.length];
+        backtrack(nums, used);
+        return result;
     }
 
-    public void backtrack(List<List<Integer>> list, List<Integer> tempList, int[] nums) {
+    public void backtrack(int[] nums, boolean[] used) {
         if (tempList.size() == nums.length) {
-            list.add(new ArrayList<>(tempList));
-        } else {
-            for (int i = 0; i < nums.length; i++) {
-                if (tempList.contains(nums[i])) {
-                    continue;
-                }
-                tempList.add(nums[i]);
-                backtrack(list, tempList, nums);
-                tempList.remove(tempList.size() - 1);
+            result.add(new ArrayList<>(tempList));
+            return;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (used[i]) {
+                continue;
             }
+            used[i] = true;
+            tempList.add(nums[i]);
+            backtrack(nums, used);
+            used[i] = false;
+            tempList.remove(tempList.size() - 1);
         }
     }
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        int[] test = {1, 2, 3,4,5};
+        int[] test = {1, 2, 3};
         System.out.print(s.permute(test));
     }
 }
