@@ -18,4 +18,12 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
 		root.right=buildTreeHelper(preStart+inIndex-inStart+1, inIndex+1, inEnd, preorder, inorder);
 		return root;
 	}
+
+	public static void main(String[] args) {
+		int[] pre={3,9,20,15,7};
+		int[] in={9,3,15,20,7};
+		ConstructBinaryTreeFromPreorderAndInorderTraversal cbtfpait=
+				new ConstructBinaryTreeFromPreorderAndInorderTraversal();
+		TreeNode root=cbtfpait.buildTree(pre, in);
+	}
 }

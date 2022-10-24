@@ -1,4 +1,6 @@
 ConstructBinaryTreeFromInorderAndPostorderTraversal根据中序遍历与后序遍历结果构造二叉树
 ConstructBinaryTreeFromPreorderAndInorderTraversal根据前序遍历与中序遍历结果构造二叉树
-InorderTraversal二叉树的中序遍历
-LevelOrderTraversal二叉树的层次遍历,也即广度优先遍历
+PreOrder前序遍历
+InOrder中序遍历
+PostOrder后序遍历
+LevelOrder层次遍历

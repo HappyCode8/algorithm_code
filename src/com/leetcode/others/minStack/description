@@ -1,0 +1,16 @@
+155. Min Stack
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+
+push(x) -- Push element x onto stack.
+pop() -- Removes the element on top of the stack.
+top() -- Get the top element.
+getMin() -- Retrieve the minimum element in the stack.
+Example:
+MinStack com.leetcode.others.minStack = new MinStack();
+com.leetcode.others.minStack.push(-2);
+com.leetcode.others.minStack.push(0);
+com.leetcode.others.minStack.push(-3);
+com.leetcode.others.minStack.getMin();   --> Returns -3.
+com.leetcode.others.minStack.pop();
+com.leetcode.others.minStack.top();      --> Returns 0.
+com.leetcode.others.minStack.getMin();   --> Returns -2.

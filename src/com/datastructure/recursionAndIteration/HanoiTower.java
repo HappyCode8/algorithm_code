@@ -7,9 +7,9 @@ public class HanoiTower {
 	 * 
 	 */
 	public void hanoi(int n,String initNeedle,String tempNeedle,String endNeedle){
-		if(n==1)
+		if(n==1) {
 			System.out.println("move "+initNeedle+" to "+endNeedle);
-		else {
+		} else {
 			hanoi(n-1,initNeedle,endNeedle,tempNeedle);
 			System.out.println("move "+initNeedle+" to "+endNeedle);
 			hanoi(n-1,tempNeedle,initNeedle,endNeedle);

@@ -9,8 +9,9 @@ public class ScaleConversion {
 	 * b:转b进制
 	 * */
 	public String baseString(int n,int b){
-		if(n==0)
+		if(n==0) {
 			return "";
+		}
 		return baseString(n/b,b)+base.charAt(n%b);
 	}
 	
@@ -25,8 +26,9 @@ public class ScaleConversion {
 			s.push(base.charAt(n%b));
 			n=n/b;
 		}
-		while (!s.empty()) 
+		while (!s.empty()) {
 			res+=s.pop();
+		}
 		return res;
 	}
 	public static void main(String[] args){

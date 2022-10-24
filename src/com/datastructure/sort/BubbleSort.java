@@ -1,7 +1,7 @@
 package com.datastructure.sort;
 
 
-import com.datastructure.util.SortUtil;
+import com.datastructure.sort.experiment.SortUtil;
 
 public class BubbleSort {
 	SortUtil su=new SortUtil();

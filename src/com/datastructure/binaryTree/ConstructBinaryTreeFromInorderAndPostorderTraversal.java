@@ -10,11 +10,21 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         	return null;
         TreeNode root=new TreeNode(postorder[postEnd]);
         int inIndex=0;
-        for (int i = 0; i < inorder.length; i++)
-			if(root.val==inorder[i])
+        for (int i = 0; i < inorder.length; i++) {
+			if(root.val==inorder[i]) {
 				inIndex=i;
+			}
+		}
 		root.left=buildTreeHelper(postEnd-(inEnd-inIndex)-1, inStart, inIndex-1, inorder, postorder);
 		root.right=buildTreeHelper(postEnd-1, inIndex+1, inEnd, inorder, postorder);
 		return root;
     }
+
+	public static void main(String[] args) {
+		int[] post={9,15,7,20,3};
+		int[] in={9,3,15,20,7};
+		ConstructBinaryTreeFromInorderAndPostorderTraversal cbtfiapt=
+				new ConstructBinaryTreeFromInorderAndPostorderTraversal();
+		TreeNode root=cbtfiapt.buildTree(in,post);
+	}
 }
