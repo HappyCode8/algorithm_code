@@ -1,4 +1,4 @@
-package personal.stock;
+package com.leetcode.dp.stock;
 
 //k=2
 public class BuyAndSell123 {

@@ -1,4 +1,4 @@
-package personal.stock;
+package com.leetcode.dp.stock;
 
 //交易次数无限制
 public class BuyAndSell122 {
@@ -9,7 +9,7 @@ public class BuyAndSell122 {
         for (int i = 1; i < prices.length; i++) {
             //当前不持有，要么是前一天不持有，要么是前一天持有今天卖了
             dp[0] = Math.max(dp[0], dp[1] + prices[i]);
-            ////当前持有，要么是前一天持有，要么是前一天不持有今天买了
+            //当前持有，要么是前一天持有，要么是前一天不持有今天买了
             dp[1] = Math.max(dp[1], dp[0] - prices[i]);
         }
         return dp[0];

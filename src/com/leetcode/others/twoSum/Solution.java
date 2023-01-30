@@ -20,7 +20,8 @@ public class Solution {
   public static void main(String[] args){
 	  Solution s=new Solution();
 	  int a[]={2,7,11,5};
-	  for(int i=0;i<s.twoSum(a, 7).length;i++)
-	  System.out.println(s.twoSum(a, 7)[i]);
+	  for(int i=0;i<s.twoSum(a, 7).length;i++) {
+		  System.out.println(s.twoSum(a, 7)[i]);
+	  }
   }
 }

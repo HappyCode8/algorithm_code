@@ -1,4 +1,4 @@
-package personal.stock;
+package com.leetcode.dp.stock;
 
 //交易次数1
 public class BuyAndSell121 {

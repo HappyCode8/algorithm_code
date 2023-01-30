@@ -2,10 +2,12 @@ package com.leetcode.others.addBinary;
 
 public class Solution {
   public String addBinary(String a,String b){
-	  if(a==null||a.isEmpty())
+	  if(a==null||a.isEmpty()) {
 		  return b;
-	  if(b==null||b.isEmpty())
+	  }
+	  if(b==null||b.isEmpty()) {
 		  return a;
+	  }
 	  char aArray[]=a.toCharArray();
 	  char bArray[]=b.toCharArray();
 	  StringBuilder c=new StringBuilder();

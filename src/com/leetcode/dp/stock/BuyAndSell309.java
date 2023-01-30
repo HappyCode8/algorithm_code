@@ -1,4 +1,4 @@
-package personal.stock;
+package com.leetcode.dp.stock;
 
 //含有冷冻期,无限制交易次数
 //https://www.cnblogs.com/zle1992/p/16549042.html

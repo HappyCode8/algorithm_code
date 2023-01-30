@@ -5,8 +5,9 @@ public class Solution {
         while(root!=null){       
         	if(root.left!=null){
         		TreeNode cur=root.left;
-        		while(cur.right!=null)
-        			cur=cur.right;
+        		while(cur.right!=null) {
+					cur=cur.right;
+				}
         		cur.right=root.right;
         		root.right=root.left;
         		root.left=null;

@@ -1,4 +1,4 @@
-package personal.stock;
+package com.leetcode.dp.stock;
 
 //扣手续费，无限次交易
 public class BuyAndSell714 {

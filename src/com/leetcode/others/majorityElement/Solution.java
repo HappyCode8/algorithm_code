@@ -1,5 +1,5 @@
 package com.leetcode.others.majorityElement;
-//�ҵ���ͬ�ľͳɶ�ɾ��
+
 public class Solution {
 public int majorityElement(int[] nums) {
 	int temp=0;
@@ -12,8 +12,9 @@ public int majorityElement(int[] nums) {
 		else if(nums[i]!=temp){
 			count--;
 		}
-		else 
+		else {
 			count++;
+		}
 	}
 	return temp;        
     }

@@ -10,15 +10,20 @@ public int longestPalindrome(String s) {
        Arrays.fill(sArrayUpper,0);
        int count=0;
        for(int i=0;i<s.length();i++){
-    	   if(s.charAt(i)>='a'&&s.charAt(i)<='z')
-    		   sArrayLower[s.charAt(i)-'a']++;
-    	   if(s.charAt(i)>='A'&&s.charAt(i)<='Z')
-    		   sArrayUpper[s.charAt(i)-'A']++;
+    	   if(s.charAt(i)>='a'&&s.charAt(i)<='z') {
+			   sArrayLower[s.charAt(i)-'a']++;
+		   }
+    	   if(s.charAt(i)>='A'&&s.charAt(i)<='Z') {
+			   sArrayUpper[s.charAt(i)-'A']++;
+		   }
        }
-    	for(int i=0;i<26;i++)
-    		count+=sArrayLower[i]/2+sArrayUpper[i]/2;
+    	for(int i=0;i<26;i++) {
+			count+=sArrayLower[i]/2+sArrayUpper[i]/2;
+		}
     	    count*=2;
-    	if(count<s.length())count++;
+    	if(count<s.length()) {
+			count++;
+		}
     	return count;    	   
     }
 public static void main(String[] args){
