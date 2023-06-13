@@ -5,18 +5,41 @@ import java.util.Map;
 
 public class Solution {
 	public int lengthOfLongestSubstring(String s) {
-		if(s.length()==0||s==null)return 0;
+		if(s.length()==0||s==null) {
+			return 0;
+		}
         Map<Character,Integer> map=new HashMap<Character,Integer>();
         int max=0;
         int left=0;
         for(int i=0;i<s.length();i++){
-        	if(map.containsKey(s.charAt(i)))
-        		left=Math.max(map.get(s.charAt(i))+1,left);        		      
+        	if(map.containsKey(s.charAt(i))) {
+				left=Math.max(map.get(s.charAt(i))+1,left);
+			}
         	map.put(s.charAt(i), i);
         	max=Math.max(max, i-left+1); 
         }
         return max;
     }
+
+	//最多允许有k个不同字符
+	public int lengthOfLongestSubstringKDistinct(String s, int k) {
+		int res = 0;
+		Map<Character, Integer> map = new HashMap<>();
+		int left = 0;
+		for (int i = 0; i < s.length(); i++) {
+			map.put(s.charAt(i), i);
+			while (map.size() > k) {
+				//如果 s[l]的 位置和l 不同，说明在[l+1 ... i ]之间又出现了字符s[l]，这是不能移除s[l],反之则移除s[l]
+				if (map.get(s.charAt(left)) == left) {
+					map.remove(s.charAt(left));
+				}
+				++left;
+			}
+			res = Math.max(res, i - left + 1);
+		}
+		return res;
+	}
+
 	public static void main(String[] args) {
 		Solution s=new Solution();
 		System.out.println(s.lengthOfLongestSubstring("pwwkew"));

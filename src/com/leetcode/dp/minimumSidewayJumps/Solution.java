@@ -1,7 +1,5 @@
 package com.leetcode.dp.minimumSidewayJumps;
 
-import java.util.PriorityQueue;
-
 public class Solution {
     public int minSideJumps(int[] obstacles) {
         int length = obstacles.length;
@@ -52,7 +50,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        com.top100.Solution s = new com.top100.Solution();
+        Solution s = new Solution();
         int[] obstacles = new int[]{};
         System.out.println(s.minSideJumps(obstacles));
     }

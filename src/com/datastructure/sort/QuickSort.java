@@ -5,9 +5,13 @@ public class QuickSort {
 	public int partition(int nums[],int low,int high){
 		int temp=nums[low];
 		while(low<high){
-			while(low<high&&nums[high]>=temp)high--;
+			while(low<high&&nums[high]>=temp) {
+				high--;
+			}
 			nums[low]=nums[high];
-			while(low<high&&nums[low]<=temp)low++;
+			while(low<high&&nums[low]<=temp) {
+				low++;
+			}
 			nums[high]=nums[low];
 		}
 		nums[low]=temp;

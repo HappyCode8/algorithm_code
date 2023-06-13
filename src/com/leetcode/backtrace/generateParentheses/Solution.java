@@ -13,6 +13,7 @@ public class Solution {
 
     public void backtrack(String str, int begin, int end, int max) {
         if (str.length() == 2 * max) {
+            System.out.println(str);
             res.add(str);
             return;
         }
@@ -26,7 +27,10 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        s.generateParenthesis(3);
+        s.generateParenthesis(2);
         System.out.println(s.res);
     }
 }
+
+
+
