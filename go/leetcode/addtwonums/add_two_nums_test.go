@@ -2,19 +2,14 @@ package addtwonums
 
 import (
 	"fmt"
-	"github.com/bytedance/mockey"
 	"testing"
 )
 
 func Test_addTwoNums(t *testing.T) {
-	mockey.PatchConvey("test", t, func() {
-		mockey.PatchConvey("testdata case1", func() {
-			list1 := createList([]int{1, 2, 3, 4, 5})
-			list2 := createList([]int{1, 2, 3, 4, 5})
-			sum := twoSum(list1, list2)
-			printList(sum)
-		})
-	})
+	list1 := createList([]int{1, 2, 3, 4, 5})
+	list2 := createList([]int{1, 2, 3, 4, 5})
+	sum := twoSum(list1, list2)
+	printList(sum)
 }
 
 func createList(nums []int) *ListNode {

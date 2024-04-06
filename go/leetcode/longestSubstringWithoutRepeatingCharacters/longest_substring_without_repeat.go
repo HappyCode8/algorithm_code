@@ -5,15 +5,15 @@ func lengthOfLongestSubstring(s string) int {
 		return 0
 	}
 	m := make(map[byte]int)
-	max, left := 0, 0
+	res, left := 0, 0
 	for i := 0; i < len(s); i++ {
 		if _, ok := m[s[i]]; ok {
 			left = maxInt(left, m[s[i]]+1)
 		}
 		m[s[i]] = i
-		max = maxInt(max, i-left+1)
+		res = maxInt(res, i-left+1)
 	}
-	return max
+	return res
 }
 
 // 最多允许有k个不同字符
