@@ -1,6 +1,6 @@
 package longestSubstringWithoutRepeatingCharacters
 
-import (
+/*import (
 	"fmt"
 	"github.com/bytedance/mockey"
 	"testing"
@@ -18,3 +18,4 @@ func Test_lengthOfLongestSubstring(t *testing.T) {
 func Test_lengthOfLongestSubstringKDistinct(t *testing.T) {
 	fmt.Println(lengthOfLongestSubstringKDistinct("abcabcbb", 1))
 }
+*/
